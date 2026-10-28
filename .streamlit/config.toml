@@ -1,0 +1,10 @@
+[theme]
+base = "dark"
+primaryColor = "#7C6CF2"
+backgroundColor = "#0F1117"
+secondaryBackgroundColor = "#1A1D29"
+textColor = "#E6E6EB"
+font = "sans serif"
+
+[client]
+toolbarMode = "minimal"   # hides developer options and the Deploy button

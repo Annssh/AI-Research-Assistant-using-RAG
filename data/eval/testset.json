@@ -1,0 +1,186 @@
+[
+  {
+    "question": "What is the advantage of using a quadratic basis expansion in SFA when dealing with video data?",
+    "reference_answer": "Using a quadratic basis expansion allows SFA to learn nonlinear features that are similar to those of complex cells in the V1 cortex when trained on small spatial patches of videos of natural scenes.",
+    "chunk_id": "880b976d7951de25-1488",
+    "doc_id": "880b976d7951de25",
+    "page": 511,
+    "source": "book.pdf, p. 511"
+  },
+  {
+    "question": "What strategy can be employed to improve optimization when facing challenges with step size due to varying curvature?",
+    "reference_answer": "Using information from the Hessian matrix can help guide the optimization process.",
+    "chunk_id": "880b976d7951de25-269",
+    "doc_id": "880b976d7951de25",
+    "page": 105,
+    "source": "book.pdf, p. 105"
+  },
+  {
+    "question": "What is the purpose of the UNET architecture in biomedical imaging?",
+    "reference_answer": "UNET is used to better segment out the cell of interest from the surrounding cells, which can be challenging due to low contrast and clustering of cells.",
+    "chunk_id": "7690848ca3fc77dd-43",
+    "doc_id": "7690848ca3fc77dd",
+    "page": 31,
+    "source": "DEBLURRING OF OPTICALLY ABERRATED SATELLITE IMAGERY WITH DEEP LEARNING (UNET).pdf, p. 31"
+  },
+  {
+    "question": "What are some key factors that have influenced the evolution of deep learning?",
+    "reference_answer": "Key factors include the historical fluctuation in its popularity, the increase in available training data, and the growth in the size of deep learning models as computing power has improved.",
+    "chunk_id": "880b976d7951de25-64",
+    "doc_id": "880b976d7951de25",
+    "page": 27,
+    "source": "book.pdf, p. 27"
+  },
+  {
+    "question": "What are the key features and advantages of the UNET architecture and its variants in image segmentation?",
+    "reference_answer": "The UNET architecture features skip connections that combine high-resolution features from the encoder with pixel-localized features from the decoder for precise image segmentation. Variants like UNET++ and UNET3+ further enhance this approach, with UNET3+ outperforming UNET++ in accuracy and speed due to having fewer parameters.",
+    "chunk_id": "7690848ca3fc77dd-44",
+    "doc_id": "7690848ca3fc77dd",
+    "page": 32,
+    "source": "DEBLURRING OF OPTICALLY ABERRATED SATELLITE IMAGERY WITH DEEP LEARNING (UNET).pdf, p. 32"
+  },
+  {
+    "question": "What does it mean for sets of variables to be separated in a graph structure?",
+    "reference_answer": "Sets of variables are considered separated if there is no path between them or if all paths contain observed variables, indicating that they are independent given certain other variables.",
+    "chunk_id": "880b976d7951de25-1719",
+    "doc_id": "880b976d7951de25",
+    "page": 588,
+    "source": "book.pdf, p. 588"
+  },
+  {
+    "question": "What method is used to train a deep neural network in supervised machine learning?",
+    "reference_answer": "The network trains using input data of blurred images and compares the output with the correct sharp images, then adjusts the weights based on the error.",
+    "chunk_id": "7690848ca3fc77dd-41",
+    "doc_id": "7690848ca3fc77dd",
+    "page": 30,
+    "source": "DEBLURRING OF OPTICALLY ABERRATED SATELLITE IMAGERY WITH DEEP LEARNING (UNET).pdf, p. 30"
+  },
+  {
+    "question": "What is the overall cost function defined in the context of maximum likelihood estimation for a classifier with regularization?",
+    "reference_answer": "The total cost function consists of the cross-entropy and a weight decay term, represented as J = MLE + \u03bb(\u2211(W(1)\u00b2) + \u2211(W(2)\u00b2)).",
+    "chunk_id": "880b976d7951de25-648",
+    "doc_id": "880b976d7951de25",
+    "page": 235,
+    "source": "book.pdf, p. 235"
+  },
+  {
+    "question": "How do the performance results of a CNN trained on a generalized dataset compare to one trained specifically for a particular dataset when tested on that dataset?",
+    "reference_answer": "The CNN trained on a generalized dataset performed better on a generalized testing dataset, but did not perform as well on a fixed factor defocus compared to the CNN trained specifically for that test data.",
+    "chunk_id": "7690848ca3fc77dd-62",
+    "doc_id": "7690848ca3fc77dd",
+    "page": 44,
+    "source": "DEBLURRING OF OPTICALLY ABERRATED SATELLITE IMAGERY WITH DEEP LEARNING (UNET).pdf, p. 44"
+  },
+  {
+    "question": "Why are sigmoidal activation functions preferred in certain types of neural networks?",
+    "reference_answer": "Sigmoidal activation functions are preferred in recurrent networks, probabilistic models, and some autoencoders because they meet additional requirements that piecewise linear activation functions do not, despite their saturation drawbacks.",
+    "chunk_id": "880b976d7951de25-576",
+    "doc_id": "880b976d7951de25",
+    "page": 211,
+    "source": "book.pdf, p. 211"
+  },
+  {
+    "question": "What are some recommended areas for future research in enhancing the performance of UNET for deblurring satellite images?",
+    "reference_answer": "Future research can explore testing other optical aberrations, improving performance with deeper UNET layers, experimenting with different hyper-parameters like loss functions, and combining UNET with other deep learning methods.",
+    "chunk_id": "7690848ca3fc77dd-70",
+    "doc_id": "7690848ca3fc77dd",
+    "page": 50,
+    "source": "DEBLURRING OF OPTICALLY ABERRATED SATELLITE IMAGERY WITH DEEP LEARNING (UNET).pdf, p. 50"
+  },
+  {
+    "question": "What is a common reason why the cross-entropy cost function is preferred over mean squared error and mean absolute error in deep feedforward networks?",
+    "reference_answer": "The cross-entropy cost function is more popular than mean squared error or mean absolute error because the latter can lead to small gradients when output units saturate, which hampers gradient-based optimization.",
+    "chunk_id": "880b976d7951de25-527",
+    "doc_id": "880b976d7951de25",
+    "page": 197,
+    "source": "book.pdf, p. 197"
+  },
+  {
+    "question": "What makes UNET variants particularly useful for deblurring satellite images affected by atmospheric turbulence?",
+    "reference_answer": "Their effectiveness, simplicity, and the addition of extra convolutional layers improve performance.",
+    "chunk_id": "7690848ca3fc77dd-45",
+    "doc_id": "7690848ca3fc77dd",
+    "page": 32,
+    "source": "DEBLURRING OF OPTICALLY ABERRATED SATELLITE IMAGERY WITH DEEP LEARNING (UNET).pdf, p. 32"
+  },
+  {
+    "question": "What can be inferred about the relationship between training error and test error when using a shared data generating distribution?",
+    "reference_answer": "The expected training error for a model is equal to the expected test error for that model, as both are derived from the same dataset sampling process.",
+    "chunk_id": "880b976d7951de25-332",
+    "doc_id": "880b976d7951de25",
+    "page": 127,
+    "source": "book.pdf, p. 127"
+  },
+  {
+    "question": "What method is proposed to improve satellite imaging performance affected by optical aberrations?",
+    "reference_answer": "Deep learning is proposed as a cost-effective method to enhance satellite imaging performance by deblurring.",
+    "chunk_id": "7690848ca3fc77dd-2",
+    "doc_id": "7690848ca3fc77dd",
+    "page": 3,
+    "source": "DEBLURRING OF OPTICALLY ABERRATED SATELLITE IMAGERY WITH DEEP LEARNING (UNET).pdf, p. 3"
+  },
+  {
+    "question": "What is the main distinction between directed and undirected probabilistic models in terms of their definitions?",
+    "reference_answer": "Directed models are directly defined in terms of probability distributions, while undirected models are defined loosely by potential functions that need to be converted into probability distributions.",
+    "chunk_id": "880b976d7951de25-1709",
+    "doc_id": "880b976d7951de25",
+    "page": 585,
+    "source": "book.pdf, p. 585"
+  },
+  {
+    "question": "What is the relationship between angular resolution and the ability of a satellite imaging system to distinguish between two objects?",
+    "reference_answer": "The angular resolution, when multiplied by the range from the lens to the target, determines the ground sample distance (GSD) resolution, which indicates how well the imaging sensor can differentiate two objects that are a certain distance apart.",
+    "chunk_id": "7690848ca3fc77dd-30",
+    "doc_id": "7690848ca3fc77dd",
+    "page": 24,
+    "source": "DEBLURRING OF OPTICALLY ABERRATED SATELLITE IMAGERY WITH DEEP LEARNING (UNET).pdf, p. 24"
+  },
+  {
+    "question": "What does the condition number of a matrix indicate about its sensitivity to input errors?",
+    "reference_answer": "The condition number indicates how sensitive matrix inversion is to errors in the input; a large condition number means the matrix is particularly sensitive to input perturbations.",
+    "chunk_id": "880b976d7951de25-246",
+    "doc_id": "880b976d7951de25",
+    "page": 98,
+    "source": "book.pdf, p. 98"
+  },
+  {
+    "question": "How has machine learning changed the process of image deblurring compared to traditional methods?",
+    "reference_answer": "Machine learning allows for a faster and more efficient deblurring process, enabling rapid output of a deblurred image compared to traditional methods like the blind deconvolution algorithm.",
+    "chunk_id": "7690848ca3fc77dd-38",
+    "doc_id": "7690848ca3fc77dd",
+    "page": 28,
+    "source": "DEBLURRING OF OPTICALLY ABERRATED SATELLITE IMAGERY WITH DEEP LEARNING (UNET).pdf, p. 28"
+  },
+  {
+    "question": "What technique is used for efficient information retrieval by reducing dimensionality and converting data into binary codes?",
+    "reference_answer": "The technique is called semantic hashing.",
+    "chunk_id": "880b976d7951de25-1570",
+    "doc_id": "880b976d7951de25",
+    "page": 541,
+    "source": "book.pdf, p. 541"
+  },
+  {
+    "question": "Who won the 2022 FIFA World Cup?",
+    "reference_answer": null,
+    "chunk_id": null,
+    "doc_id": null,
+    "page": null,
+    "source": null
+  },
+  {
+    "question": "What is the capital of Australia?",
+    "reference_answer": null,
+    "chunk_id": null,
+    "doc_id": null,
+    "page": null,
+    "source": null
+  },
+  {
+    "question": "How do I make a margherita pizza?",
+    "reference_answer": null,
+    "chunk_id": null,
+    "doc_id": null,
+    "page": null,
+    "source": null
+  }
+]

@@ -1,0 +1,275 @@
+{
+  "retrieval": {
+    "vector": {
+      "hit@1": 0.6,
+      "hit@5": 0.9,
+      "mrr": 0.718
+    },
+    "hybrid": {
+      "hit@1": 0.7,
+      "hit@5": 0.95,
+      "mrr": 0.787
+    },
+    "hybrid + rerank": {
+      "hit@1": 0.6,
+      "hit@5": 0.9,
+      "mrr": 0.71
+    },
+    "hybrid + rewrite": {
+      "hit@1": 0.6,
+      "hit@5": 0.85,
+      "mrr": 0.678
+    },
+    "full pipeline": {
+      "hit@1": 0.6,
+      "hit@5": 0.9,
+      "mrr": 0.718
+    },
+    "final setup": {
+      "hit@1": 0.75,
+      "hit@5": 0.95,
+      "mrr": 0.812
+    }
+  },
+  "answers": {
+    "summary": {
+      "faithfulness": 4.8,
+      "relevance": 5.0,
+      "correctness": 4.9,
+      "correct_abstentions": "3/3",
+      "false_abstentions": "0/20"
+    },
+    "rows": [
+      {
+        "question": "What is the advantage of using a quadratic basis expansion in SFA when dealing with video data?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "The advantage of using a quadratic basis expansion in SFA when dealing with video data is that it allows SFA to learn features that share many characteristics with those of complex cells in the V1 cortex, which is beneficial when trained on small spatial patches of videos of natural scenes (book.pdf, p. 511).",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer restates the retrieved passage (book.pdf, p.511) that SFA with quadratic basis expansions learns features resembling complex cells in V1 when trained on small spatial patches of natural-scene videos, so it is fully supported, directly addresses the question, and matches the reference."
+      },
+      {
+        "question": "What strategy can be employed to improve optimization when facing challenges with step size due to varying curvature?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "A strategy that can be employed to improve optimization when facing challenges with step size due to varying curvature is to use information from the Hessian matrix to guide the step size (book.pdf, p. 105). Additionally, when strong negative curvature is present, it may be necessary for the value of \u03b1 to be sufficiently large to offset the negative eigenvalues, although this can lead to Newton\u2019s method making smaller steps than gradient descent with a properly chosen learning rate (book.pdf, p. 328). The passages do not detail specific methods or examples for using the Hessian matrix or choosing \u03b1 in practice.",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "All claims are supported by the retrieved passages: p.105 states using the Hessian can resolve the step-size issue, and p.328 discusses needing a large \u03b1 to offset negative curvature and the resulting effects on Newton\u2019s method. The answer stays within the information present and does not introduce unsupported facts."
+      },
+      {
+        "question": "What is the purpose of the UNET architecture in biomedical imaging?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "UNET is used to better segment out the cell of interest from the surrounding cells, which can be challenging due to low contrast and clustering of cells (file, p. 31).",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer exactly matches the retrieved passage (file p.31) and the reference answer, stating that U-Net was developed for biomedical image segmentation to separate the cell of interest from surrounding cells, particularly when contrast is low or cells cluster."
+      },
+      {
+        "question": "What are some key factors that have influenced the evolution of deep learning?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "Some key factors that have influenced the evolution of deep learning include: \n\n1. The increase in available training data, making deep learning more useful (book.pdf, p. 27).\n2. The advent of general-purpose GPUs and better software infrastructure for distributed computing (book.pdf, p. 39).\n3. Consistent improvements in accuracy and the ability to handle more complex and broader applications (book.pdf, p. 39).\n4. Increases in the size of neural networks, which has positively impacted the accuracy and complexity of tasks they can solve (book.pdf, p. 459). \n\nWhat's missing is a more detailed historical context or timeline of specific developments in deep learning.",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 4,
+        "explanation": "All listed factors are supported by the retrieved passages (training data, GPUs/software infrastructure, accuracy/complexity improvements, and network size growth). However, the answer omits the reference\u2019s point about deep learning\u2019s historical waxing and waning in popularity, so it does not fully match the reference answer."
+      },
+      {
+        "question": "What are the key features and advantages of the UNET architecture and its variants in image segmentation?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "The key features and advantages of the UNET architecture and its variants in image segmentation include:\n\n1. Skip connections between the encoder-decoder nodes at the same stages, which combine higher resolution features from the encoder nodes with better pixel-localized features from the decoder nodes, resulting in more precise image segmentation (file, p. 32).\n\n2. Innovations in the scale of skip connections and the supervision of the first stage encoder node on other nodes further advanced the UNET architecture, leading to variants like UNET++ and UNET3+ (file, p. 32).\n\n3. UNET3+ not only outperformed UNET++ in selected datasets (liver and spleen) based on an IQM (i.e., dice similarity coefficient) but also had the advantage of being faster due to having fewer parameters (file, p. 32).\n\n4. The use of UNET variants has been validated in bio-medical images for semantic segmentation, indicating their effectiveness and applicability (file, p. 49).\n\nWhat is missing is a detailed explanation of how these features translate into practical advantages in specific applications or examples beyond the mentioned datasets.",
+        "faithfulness": 4,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer accurately reflects the retrieved passages regarding skip connections, the evolution to UNET++ and UNET3+, and UNET3+ outperforming UNET++ with fewer parameters (p.32, p.49). It loses a point because the final comment about a missing detailed explanation is an unsupported meta-claim not present in the provided passages."
+      },
+      {
+        "question": "What does it mean for sets of variables to be separated in a graph structure?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "A set of variables A is separated from another set of variables B given a third set of variables S if the graph structure implies that A is independent from B given S. If no path exists between them, or all paths contain an observed variable, then they are separated (book.pdf, p. 588).",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer directly matches the retrieved passages (book.pdf p.588), stating that A is separated from B given S when the graph implies independence and that separation occurs when no path exists or all paths contain an observed variable; this matches the reference."
+      },
+      {
+        "question": "What method is used to train a deep neural network in supervised machine learning?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "In supervised machine learning, the method used to train a deep neural network involves using training data that comprises blurred images (input) as well as the pristine/original sharp images (correct output). The output obtained from the input is compared with the correct output to obtain an error, which is then back propagated through the neural network to adjust the weights of the neural network via a learning rule (DEBLURRING OF OPTICALLY ABERRATED SATELLITE IMAGERY WITH DEEP LEARNING (UNET).pdf, p. 30). \n\nMissing information: The specific details of the learning rule or algorithm used for backpropagation are not provided.",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer directly reproduces the process described in the retrieved deblurring document (DEBLURRING... p.30): training with blurred inputs and corresponding sharp targets, computing error, and backpropagating to adjust weights. All claims are supported by the passage and match the reference answer; no unsupported assertions were made."
+      },
+      {
+        "question": "What is the overall cost function defined in the context of maximum likelihood estimation for a classifier with regularization?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "The overall cost function defined in the context of maximum likelihood estimation for a classifier with regularization is the cross-entropy combined with a weight decay term, expressed as J = JMLE + \u03bb(\u03a3 W(1)_i,j^2 + \u03a3 W(2)_i,j^2) (file, p. 235).",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer matches the retrieved passage (p.235) which states the total cost is the cross-entropy (J_MLE) plus a weight-decay regularization term \u03bb times the sum of squares of W(1) and W(2)."
+      },
+      {
+        "question": "How do the performance results of a CNN trained on a generalized dataset compare to one trained specifically for a particular dataset when tested on that dataset?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "A CNN trained on a generalized dataset performed better on the testing dataset that had the mixed defocus factor, suggesting that it would also perform better on a generalized testing dataset. However, when tested on a defocus with a fixed factor, the CNN trained on the mixed defocus factor did not perform as well when compared to the CNN trained specifically on the test data (file, p. 44). What is missing is a comparison of absolute performance metrics for both CNNs on the specified dataset.",
+        "faithfulness": 2,
+        "relevance": 5,
+        "correctness": 4,
+        "explanation": "The response's main claims\u2014that a CNN trained on a generalized (mixed-defocus) dataset performs better on a mixed/general testing dataset, but underperforms on a fixed-defocus test versus a CNN trained specifically for that fixed factor\u2014are directly supported by the retrieved passages (p.44). However, the statement that a comparison of absolute performance metrics is missing is not supported: Table 7 in the retrieved passages provides absolute metrics (MSE, PSNR, SSIM) for the described conditions, so that claim is inaccurate."
+      },
+      {
+        "question": "Why are sigmoidal activation functions preferred in certain types of neural networks?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "Sigmoidal activation functions are preferred in certain types of neural networks, such as recurrent networks, probabilistic models, and some autoencoders, because they meet additional requirements that rule out the use of piecewise linear activation functions, making sigmoidal units more appealing despite the drawbacks of saturation (book.pdf, p. 211). However, the passages do not provide specific reasons for their preference beyond this context.",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer accurately restates the retrieved passage that sigmoidal units are preferred in recurrent networks, probabilistic models, and some autoencoders because these settings impose requirements that rule out piecewise linear activations, and it correctly notes the passages do not give further specific reasons. All claims are supported by the provided excerpts (book.pdf, p.211)."
+      },
+      {
+        "question": "What are some recommended areas for future research in enhancing the performance of UNET for deblurring satellite images?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "The recommended areas for future research in enhancing the performance of UNET for deblurring satellite images include: \n\n1. Testing other optical aberrations with higher factors of aberrations to expand UNET's application envelope.\n2. Improving deblurring performance with deeper UNET layers.\n3. Testing different hyper-parameters such as loss functions, e.g., focal loss.\n4. Combining UNET with other deep learning techniques (file, p. 50).",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "All four recommended areas (testing other optical aberrations/higher factors, deeper UNET layers, experimenting with hyper-parameters such as loss functions, and combining UNET with other deep learning methods) are explicitly listed in the retrieved document (p.50). The answer directly matches the reference."
+      },
+      {
+        "question": "What is a common reason why the cross-entropy cost function is preferred over mean squared error and mean absolute error in deep feedforward networks?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "A common reason why the cross-entropy cost function is preferred over mean squared error and mean absolute error in deep feedforward networks is that mean squared error and mean absolute error often lead to poor results when used with gradient-based optimization because some output units that saturate produce very small gradients when combined with these cost functions (book.pdf, p. 197).",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer accurately restates the retrieved passage (book.pdf p.197) that MSE/MAE can produce very small gradients when output units saturate, which is why cross-entropy is preferred; it directly matches the reference answer and cites the source."
+      },
+      {
+        "question": "What makes UNET variants particularly useful for deblurring satellite images affected by atmospheric turbulence?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "UNET variants are particularly useful for deblurring satellite images affected by atmospheric turbulence due to their effectiveness and simplicity. Specifically, they have the advantage of being faster because they have lesser parameters, and they have been applied successfully to tasks such as deblurring of satellite images. Additionally, modifications such as adding convolutional layers (convolutional autoencoder) to the UNET variants at both the encoder beginning and decoder end have yielded better performance (file, p. 32).",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "All claims in the answer (effectiveness, simplicity, fewer parameters leading to speed, successful application to deblurring, and improved performance when adding convolutional layers/CAE at encoder and decoder) are directly supported by the retrieved passages (pages 3, 7, 32, 49)."
+      },
+      {
+        "question": "What can be inferred about the relationship between training error and test error when using a shared data generating distribution?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "When using a shared data generating distribution, it can be inferred that the expected training error of a randomly selected model is equal to the expected test error of that model. This is because both the training and test errors are formed using the same dataset sampling process (book.pdf, p. 127).",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer restates the passage from book.pdf (p.127) that the expected training error equals the expected test error when both are drawn from the same data-generating distribution; all claims are supported and match the reference answer."
+      },
+      {
+        "question": "What method is proposed to improve satellite imaging performance affected by optical aberrations?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "The proposed method to improve satellite imaging performance affected by optical aberrations is deep learning, which presents a cost-effective alternative to traditional adaptive optics for deblurring satellite images (file, p. 7).",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer exactly matches the retrieved passages (abstract p.7 and related pages) which state that deep learning is proposed as a cost-effective alternative to adaptive optics for deblurring optically aberrated satellite imagery."
+      },
+      {
+        "question": "What is the main distinction between directed and undirected probabilistic models in terms of their definitions?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "One key difference between directed modeling and undirected modeling is that directed models are defined directly in terms of probability distributions from the start, while undirected models are defined more loosely by \u03c6 functions that are then converted into probability distributions (book.pdf, p. 585).",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer exactly matches the retrieved passage (book.pdf p.585) and directly addresses the question about the main distinction between directed and undirected models, so it is fully supported, relevant, and correct."
+      },
+      {
+        "question": "What is the relationship between angular resolution and the ability of a satellite imaging system to distinguish between two objects?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "The angular resolution (\ud835\udf03) is linked to the ground sample distance (GSD) resolution, which indicates how well the imaging sensor can discriminate two objects that are a distance X apart. The passage states, \"the smaller the GSD resolution, the better it can detect smaller targets\" (file, p. 24). Thus, as the angular resolution improves (becomes smaller), the ability of the satellite imaging system to distinguish between two objects also improves.",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer accurately reflects the retrieved passages: it links angular resolution to GSD (which determines the minimum separable distance X) and correctly concludes that smaller angular resolution improves the ability to distinguish objects, matching the source text."
+      },
+      {
+        "question": "What does the condition number of a matrix indicate about its sensitivity to input errors?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "The condition number of a matrix indicates how rapidly a function changes with respect to small changes in its inputs. When this number is large, matrix inversion is particularly sensitive to error in the input (book.pdf, p. 98).",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer directly quotes and paraphrases passages from book.pdf (p.98) that define conditioning and state that a large condition number makes matrix inversion particularly sensitive to input errors, matching the reference answer."
+      },
+      {
+        "question": "How has machine learning changed the process of image deblurring compared to traditional methods?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "Machine learning (ML) has changed the process of image deblurring compared to traditional methods by allowing a computer software to derive a model from training data, which can rapidly output a deblurred image, thus having the advantage of speed over traditional methods such as the blind deconvolution algorithm. This makes ML ideal for near real-time applications (file, p. 28). Additionally, compared to conventional physics-driven approaches, the data-driven approach using AI can quickly restore a new blurred image in real time and is often more efficient than traditional image-by-image optimization methods (file, p. 19). \n\nWhat is missing is specific quantitative comparisons or metrics that illustrate the differences in efficiency or effectiveness between machine learning and traditional methods.",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The answer accurately and directly summarizes the retrieved passages: ML derives models from training data and enables rapid model inference (faster than blind deconvolution), making it suitable for near-real-time use and more efficient than per-image optimization. The note that quantitative comparisons are missing is also correct and supported by the documents."
+      },
+      {
+        "question": "What technique is used for efficient information retrieval by reducing dimensionality and converting data into binary codes?",
+        "in_scope": true,
+        "abstained": false,
+        "answer": "The technique used for efficient information retrieval by reducing dimensionality and converting data into binary codes is called semantic hashing (Salakhutdinov and Hinton 2007b 2009b).",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The retrieved passages explicitly name the approach as \"semantic hashing\" and describe reducing dimensionality and producing binary codes; the answer matches the documents exactly."
+      },
+      {
+        "question": "Who won the 2022 FIFA World Cup?",
+        "in_scope": false,
+        "abstained": true,
+        "answer": "Not found in the documents.",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The reference indicates the documents do not contain the answer; the response correctly states the information was not found. There are no unsupported claims and it directly addresses the question."
+      },
+      {
+        "question": "What is the capital of Australia?",
+        "in_scope": false,
+        "abstained": true,
+        "answer": "Not found in the documents.",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The retrieved passages were empty and the reference indicates the documents do not contain the answer. The response correctly states the information was not found in the documents, so it is faithful, directly relevant, and correct."
+      },
+      {
+        "question": "How do I make a margherita pizza?",
+        "in_scope": false,
+        "abstained": true,
+        "answer": "Not found in the documents.",
+        "faithfulness": 5,
+        "relevance": 5,
+        "correctness": 5,
+        "explanation": "The retrieved passages were empty and the correct response when the documents do not contain the answer is to state it was not found; the answer does exactly that and makes no unsupported claims."
+      }
+    ]
+  }
+}
